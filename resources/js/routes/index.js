@@ -14,6 +14,9 @@ const routes = [
     {
         path: '/users/:uuid/edit',
         component: Edit
+    },
+    {
+        path: '*', redirect: '/'
     }
 ]
 

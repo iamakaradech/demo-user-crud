@@ -116,6 +116,6 @@
 </script>
 <style scoped>
     th {
-        width: 30%;
+        width: 20%;
     }
 </style>
