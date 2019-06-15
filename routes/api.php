@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['prefix' => 'users', 'as' => 'api.', 'namespace' => 'Api'], function () {
+   Route::get('/', ['as' => 'users.index', 'uses' => 'UserController@index']);
+   Route::get('/{uuid}', ['as' => 'users.show', 'uses' => 'UserController@show']);
+   Route::put('/{uuid}', ['as' => 'users.update', 'uses' => 'UserController@update']);
+});

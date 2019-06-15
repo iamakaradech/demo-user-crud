@@ -1,10 +1,7 @@
 <template>
     <div>
-        <router-view></router-view>
+        <div class="container px-3 py-3">
+            <router-view></router-view>
+        </div>
     </div>
 </template>
-<script>
-    export default {
-        name: 'app-wrapper'
-    }
-</script>

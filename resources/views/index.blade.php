@@ -7,10 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Prompt:300,400&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        * {
+            font-family: 'Prompt', sans-serif;;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
-    <h1>Index page</h1>
 </div>
 <script src="{{ mix('js/app.js') }}"></script>
 </body>

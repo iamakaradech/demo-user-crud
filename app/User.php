@@ -36,4 +36,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $guarded = ['uuid'];
+
+    public function getAvatarAttribute($value)
+    {
+        return $value ? url('uploads/' . $value) : null;
+    }
+
+    public function getCoverPhotoAttribute($value)
+    {
+        return $value ? url('uploads/' . $value) : null;
+    }
 }

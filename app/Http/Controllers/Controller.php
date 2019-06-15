@@ -10,4 +10,21 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function apiSuccess($payload)
+    {
+        return $this->apiResponse($payload, 200);
+    }
+
+    public function apiError($payload)
+    {
+        return $this->apiResponse($payload, 500);
+    }
+
+    public function apiResponse($payload, $statusCode)
+    {
+        return response()->json([
+            'data' => $payload,
+        ])->setStatusCode($statusCode);
+    }
 }
