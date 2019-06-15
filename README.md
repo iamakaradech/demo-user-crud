@@ -8,3 +8,5 @@ chmod +x init.sh
 
 ./init.sh
 ```
+
+## Browse to 127.0.0.1:8080
